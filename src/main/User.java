@@ -51,7 +51,14 @@ public class User {
 //List sort
         users.sort((o1, o2) -> o1.getAge() - o2.getAge());
 
-        System.out.println("\nAfter sort:");
+        System.out.println("\nAfter sort for age:");
+        for (User user : users) {
+            System.out.println(user);
+        }
+
+        users.sort((o1,o2) -> o1.getName().compareTo(o2.getName()));
+
+        System.out.println("\nAfter sort for name:");
         for (User user : users) {
             System.out.println(user);
         }
