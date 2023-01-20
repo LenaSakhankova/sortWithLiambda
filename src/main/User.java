@@ -48,13 +48,8 @@ public class User {
         for (User user : users) {
             System.out.println(user.toString());
         }
-
-        Collections.sort(users, new Comparator<User>() {
-            @Override
-            public int compare(User o1, User o2) {
-                return o1.getAge() - o2.getAge();
-            }
-        });
+//List sort
+        users.sort((o1, o2) -> o1.getAge() - o2.getAge());
 
         System.out.println("\nAfter sort:");
         for (User user : users) {
